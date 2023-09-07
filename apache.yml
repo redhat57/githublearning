@@ -1,0 +1,18 @@
+---
+- name: Install Apache and Copy HTML File
+  hosts: node3
+  become: yes
+  tasks:
+    - name: Update package cache
+      apt:
+        update_cache: yes
+
+    - name: Install Apache web server
+      apt:
+        name: apache2
+        state: present
+
+    - name: Copy HTML file
+      copy:
+        src: /path/to/local/index.html
+        dest: /var/www/html/index.html
