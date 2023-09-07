@@ -25,9 +25,9 @@
     - name: Copy CSS
       copy:
         src: css/
-        dest: /var/www/html/
+        dest: /var/www/html/css/
 
     - name: Copy IMG
       copy:
         src: img/
-        dest: /var/www/html/
+        dest: /var/www/html/img/
